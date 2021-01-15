@@ -33,9 +33,7 @@ def main(stdscr):
 		elif key == curses.KEY_DOWN and current_row < len(buttons)-1:
 			current_row += 1
 		elif key == curses.KEY_ENTER or key in [10, 13]:
-			if current_row == 0:
-				return
-			elif current_row == len(buttons) - 1:
+			if current_row == len(buttons) - 1:
 				exit(0)
 			else:
 				return buttons[current_row]
